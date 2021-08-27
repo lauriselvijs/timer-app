@@ -7,10 +7,10 @@ export class TimerMainArea extends Component {
     return (
       <div class="container">
         <div class="row">
-          <div class="col-sm col-lg-6 col-md-4">
+          <div class="col-sm col-lg-3">
             <TimerForm />
           </div>
-          <div class="col-sm col-lg-6 col-md-8">
+          <div class="col-sm col-lg-9">
             <Timers />
           </div>
         </div>

@@ -1,0 +1,11 @@
+.timers {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+@media only screen and (max-width: 1020px) {
+  .timers {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
