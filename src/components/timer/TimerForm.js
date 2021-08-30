@@ -6,6 +6,10 @@ import TimerInputErrMsg from "./TimerInputErrMsg";
 import { connect } from "react-redux";
 import { addTimer } from "../../state/actions/timerActions";
 
+/*
+ * Timer form allows user input time and memo
+ */
+
 export class TimerForm extends Component {
   constructor(props) {
     super(props);

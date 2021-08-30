@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+/*
+ * Displays error msg to user if incorrect input (no time,
+ * or memo inputted)
+ */
+
 export default class TimerInputErrMsg extends Component {
   render() {
     return (

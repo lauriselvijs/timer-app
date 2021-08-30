@@ -6,6 +6,10 @@ import { connect } from "react-redux";
 import { getTimers, deleteTimer } from "../../state/actions/timerActions";
 import PropTypes from "prop-types";
 
+/*
+ * Component loops trough timer items and also deletes them
+ */
+
 export class Timers extends Component {
   constructor(props) {
     super(props);

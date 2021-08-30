@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../styles/About.css";
 
+/*
+ * About component shows information about timer app
+ */
+
 export default class About extends Component {
   render() {
     return (

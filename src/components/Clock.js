@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import "../styles/Clock.css";
-import { convertDurationtoSeconds } from "./utils/timeConv";
+import { convertDurationToSeconds } from "./utils/timeConv";
+
+/*
+ * Clock component needed for displaying dynamic countdown clock
+ */
 
 const minuteSeconds = 60;
 const hourSeconds = 3600;
@@ -37,7 +41,7 @@ export class Clock extends Component {
     };
 
     const startTime = Date.now() / 1000; // use UNIX timestamp in seconds
-    const endTime = startTime + convertDurationtoSeconds(initialTime); // use UNIX timestamp in seconds
+    const endTime = startTime + convertDurationToSeconds(initialTime); // use UNIX timestamp in seconds
 
     const remainingTime = endTime - startTime;
 

@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+/*
+ * Navigation bar displays timer, help and about links
+ */
+
 export class Navbar extends Component {
   render() {
     return (

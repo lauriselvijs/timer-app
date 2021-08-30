@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import Clock from "../Clock";
 
+/*
+ * TimeCard displays single timer item with memo, timer, stop
+ * and cancel buttons
+ */
+
 export class TimerCard extends Component {
   constructor(props) {
     super(props);

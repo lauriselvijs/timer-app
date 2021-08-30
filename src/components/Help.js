@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Help.css";
 
+/*
+ * Help component, for displaying help to user
+ */
+
 export class Help extends Component {
   rc;
   render() {
