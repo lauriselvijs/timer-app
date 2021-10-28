@@ -9,12 +9,7 @@ import { Link } from "react-router-dom";
 export default class TimerInputErrMsg extends Component {
   render() {
     return (
-      <div class="alert alert-dismissible alert-primary mt-2">
-        <button
-          type="button"
-          className="btn-close"
-          data-bs-dismiss="alert"
-        ></button>
+      <div className="alert alert-primary mt-2">
         <strong>Oh snap!</strong>{" "}
         <Link to="/help" className="alert-link">
           Change a few things up

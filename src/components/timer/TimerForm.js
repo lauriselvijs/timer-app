@@ -15,7 +15,7 @@ export class TimerForm extends Component {
     super(props);
     this.onTimeChange = this.onTimeChange.bind(this);
     this.onDescChange = this.onDescChange.bind(this);
-    this.onStartBtnClick = this.onStartBtnClick.bind(this);
+    this.onAddBtnClick = this.onAddBtnClick.bind(this);
 
     this.state = {
       time: "",
@@ -36,7 +36,7 @@ export class TimerForm extends Component {
     });
   }
 
-  onStartBtnClick(e) {
+  onAddBtnClick(e) {
     e.preventDefault();
     if (this.state.desc && this.state.time) {
       const timer = {
@@ -55,6 +55,8 @@ export class TimerForm extends Component {
     } else {
       this.setState({
         error: true,
+        time: "",
+        desc: "",
       });
     }
   }
@@ -67,21 +69,21 @@ export class TimerForm extends Component {
         <form className="m-2">
           <fieldset>
             <div className="form-group">
-              <label for="desc" className="form-label mt-4">
+              <label htmlFor="desc" className="form-label mt-4">
                 Description
               </label>
               <input
                 type="text"
                 className="form-control"
                 id="desc"
-                ariaDescribedBy="Desc"
+                aria-describedby="Desc"
                 placeholder="Enter Description"
                 value={this.state.desc}
                 onChange={this.onDescChange}
               />
             </div>
             <div className="form-group">
-              <label for="time" className="form-label mt-2">
+              <label htmlFor="time" className="form-label mt-2">
                 Time
               </label>
               <Cleave
@@ -101,9 +103,9 @@ export class TimerForm extends Component {
               <button
                 className="btn btn-lg btn-primary"
                 type="button"
-                onClick={this.onStartBtnClick}
+                onClick={this.onAddBtnClick}
               >
-                Start
+                Add
               </button>
             </div>
           </fieldset>

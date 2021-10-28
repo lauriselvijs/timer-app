@@ -9,15 +9,11 @@ import Timers from "./Timers";
 export class TimerMainArea extends Component {
   render() {
     return (
-      <div class="container">
-        <div class="row">
-          <div class="col-sm col-lg-3">
-            <TimerForm />
-          </div>
-          <div class="col-sm col-lg-9">
-            <Timers />
-          </div>
+      <div className="d-flex flex-row ">
+        <div className="m-2">
+          <TimerForm />
         </div>
+        <Timers />
       </div>
     );
   }

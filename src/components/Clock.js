@@ -49,7 +49,7 @@ export class Clock extends Component {
       <div className="clock-container">
         <CountdownCircleTimer
           {...timerProps}
-          colors={[["#e83283"]]}
+          colors={[["#FFFFFF"]]}
           duration={daySeconds}
           initialRemainingTime={remainingTime % daySeconds}
           onComplete={(totalElapsedTime) => [
@@ -62,7 +62,7 @@ export class Clock extends Component {
         </CountdownCircleTimer>
         <CountdownCircleTimer
           {...timerProps}
-          colors={[["#e83283"]]}
+          colors={[["#FFFFFF"]]}
           duration={hourSeconds}
           initialRemainingTime={remainingTime % hourSeconds}
           onComplete={(totalElapsedTime) => [
@@ -75,7 +75,7 @@ export class Clock extends Component {
         </CountdownCircleTimer>
         <CountdownCircleTimer
           {...timerProps}
-          colors={[["#e83283"]]}
+          colors={[["#FFFFFF"]]}
           duration={minuteSeconds}
           initialRemainingTime={remainingTime % minuteSeconds}
           onComplete={(totalElapsedTime) => [

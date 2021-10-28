@@ -1,11 +1,17 @@
-.timers {
-  display: grid;
-  grid-template-columns: auto auto;
+.fade-enter {
+  opacity: 0.01;
 }
 
-@media only screen and (max-width: 1020px) {
-  .timers {
-    display: grid;
-    grid-template-columns: auto;
-  }
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 1000ms ease-in;
 }

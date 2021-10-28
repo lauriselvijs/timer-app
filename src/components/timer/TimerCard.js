@@ -30,25 +30,25 @@ export class TimerCard extends Component {
     const { isPlaying } = this.state;
 
     return (
-      <div class="card border-primary mt-2" style={{ maxWidth: "18rem" }}>
-        <div class="card-header">Timer</div>
-        <div class="card-body">
-          <h4 class="card-title">
+      <div className="card border-primary mt-2" style={{ maxWidth: "18rem" }}>
+        <div className="card-header">Timer</div>
+        <div className="card-body">
+          <h4 className="card-title">
             <Clock time={time} isPlaying={isPlaying} />
           </h4>
-          <p class="card-text">{desc}</p>
+          <p className="card-text">{desc}</p>
         </div>
-        <div class="card-footer text-muted">
+        <div className="card-footer text-muted">
           <button
             type="button"
-            class="btn btn-secondary m-2"
+            className="btn btn-secondary m-2"
             onClick={this.onStopBtnClick}
           >
             {isPlaying ? <>Stop</> : <>Start</>}
           </button>
           <button
             type="button"
-            class="btn btn-primary btn-lg"
+            className="btn btn-primary btn-lg"
             onClick={this.props.onDelete}
           >
             Delete

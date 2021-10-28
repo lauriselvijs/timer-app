@@ -10,7 +10,9 @@ export default class Footer extends Component {
     return (
       <footer className="footer">
         <hr />
-        <p className="copyright-year">Copyright &copy; 2021</p>
+        <p className="copyright-year">
+          Copyright &copy; {new Date().getFullYear()}
+        </p>
       </footer>
     );
   }

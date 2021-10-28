@@ -14,6 +14,7 @@ export class Timers extends Component {
   constructor(props) {
     super(props);
 
+    this.nodeRef = React.createRef(null);
     this.deleteTimeCard = this.deleteTimeCard.bind(this);
 
     this.state = {
@@ -33,21 +34,25 @@ export class Timers extends Component {
     const { timers } = this.props.timer;
 
     return (
-      <TransitionGroup>
-        <div className="timers">
+      <div className="container">
+        <TransitionGroup className="row">
           {timers.map((timer) => (
-            <div className="container">
-              <CSSTransition key={timer.id} timeout={500} classNames="fade">
+            <CSSTransition
+              nodeRef={this.nodeRef}
+              key={timer.id}
+              timeout={1000}
+              classNames="fade"
+            >
+              <div ref={this.nodeRef} className="col">
                 <TimerCard
-                  key={timer.id}
                   timer={timer}
                   onDelete={this.deleteTimeCard.bind(this, timer.id)}
                 />
-              </CSSTransition>
-            </div>
+              </div>
+            </CSSTransition>
           ))}
-        </div>
-      </TransitionGroup>
+        </TransitionGroup>
+      </div>
     );
   }
 }
